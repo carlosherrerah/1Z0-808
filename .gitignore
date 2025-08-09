@@ -11,7 +11,7 @@
 .mtj.tmp/
 
 # Package Files #
-*.jar
+# *.jar   // activar o desactivar
 *.war
 *.nar
 *.ear
