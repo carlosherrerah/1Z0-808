@@ -1,0 +1,29 @@
+SCJP_8 pag 25/1777
+
+Contenido Tema
+1          Declarations and Access Control	
+2          Object Orientation							
+3          Assignments									
+4          Operators										
+5          Flow Control and Exceptions					
+6          Strings, Arrays, ArrayLists, Dates, and Lambdas
+
+Modulo	Tema
+1	    Conceptos básicos de Java
+2	    Trabajar con tipos de datos de Java
+3	    Uso de operadores y construcciones de decisión
+4	    Creación y uso de matrices
+5	    Uso de construcciones de bucle
+6	    Trabajo con métodos y encapsulación
+7	    Trabajar con herencia
+8	    Manejo de excepciones
+9	    Trabajar con clases de selección
+
+Configuracion VS Code
+No visualizar parametros de métodos en las firmas
+    "editor.parameterHints.enabled": false
+
+Java: Activating forever
+    Ctrl + Shift + P
+        Java: Clean the Java language server workspace
+            Choose "Restart and delete"
