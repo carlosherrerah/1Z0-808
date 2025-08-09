@@ -13,18 +13,11 @@ public class EjemploTipos {
         System.out.println("\n--- Tipos de datos avanzados ---");
 
         int valor = 100;
-        Integer objeto = Integer.valueOf(valor);
-        BigDecimal bd = new BigDecimal("12345.6789");
-        BigDecimal resultado = bd.multiply(new BigDecimal("2.5"));
-        System.out.println("Resultado preciso: " + resultado);
-        System.out.println("Valor entero: " + objeto);
-        System.out.println("Valor BigDecimal: " + bd);
+        Integer objeto1 = Integer.valueOf(valor);
+        Integer objeto2 = valor; // Autoboxing
+        
+        System.out.println(objeto1-1);
+        System.out.println(objeto2+1);
 
-
-        BigDecimal precio = new BigDecimal("19.99");
-        BigDecimal cantidad = new BigDecimal("3");
-        BigDecimal total = precio.multiply(cantidad).setScale(2, RoundingMode.HALF_UP);
-
-        System.out.println("Total a pagar: $" + total);
     }
 }
