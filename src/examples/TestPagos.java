@@ -7,7 +7,7 @@ import examples.pagos.*;
 
 public class TestPagos {
     public static void main(String[] args) {
-        System.out.println("\033[H\033[2J"); // limpiar pantalla
+        //System.out.println("\033[H\033[2J"); // limpiar pantalla
         // Ejemplo de uso de la interfaz IPago y las clases que la implementan
         IPago tarjeta = new PagoTarjeta("1234-5678-9012-3456");
         IPago paypal = new PagoPaypal("cliente@correo.com");

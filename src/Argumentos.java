@@ -1,4 +1,4 @@
-import oca.c0.P2Parametros;
+// import oca.c0.P2Parametros;
 
 public class Argumentos {
 
@@ -14,6 +14,7 @@ public class Argumentos {
     }
     System.out.println();
 
+    /*/
     for (String elemento : args) {    // for mejorado
       System.out.println(elemento);
     }
@@ -21,6 +22,7 @@ public class Argumentos {
 
     resultado = P2Parametros.sumar(10, 20);
     System.out.println("La suma es : " + resultado);
+    */
 
     System.out.println(". . . Hecho en Argumentos");
 

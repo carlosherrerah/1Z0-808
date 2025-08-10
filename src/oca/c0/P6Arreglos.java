@@ -12,7 +12,9 @@ public class P6Arreglos {
 
     Scanner scanner = new Scanner(System.in);
 
-    int[] a = new int[] { 6, 8, 2, 4 };
+    int[] numeros1 = new int[] {1, 2, 3, 4, 5};
+    int[] numeros2 = {6, 7, 8, 9, 10};
+
     Integer b[] = new Integer[] { 10, 8, 4, 6 };  
     // Wrapper classes provide a way to use primitive data types (int, boolean, etc..) as objects.
 
@@ -23,7 +25,7 @@ public class P6Arreglos {
     String[] despedida =  new String[]{"See", "You"};
     
     // El método valueOf() en Java es un método estático de la clase String 
-    //    que se utiliza para convertir diferentes tipos de datos (números, booleanos, caracteres, objetos, etc.)
+    //   que se utiliza para convertir diferentes tipos de datos (números, booleanos, caracteres, objetos, etc.)
     //   en una representación en cadena (String).    
     boolean esActivo = true;
     String estado = String.valueOf(esActivo);

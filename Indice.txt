@@ -28,3 +28,5 @@ Java: Activating forever
         Java: Clean the Java language server workspace
             Choose "Restart and delete"
  
+Mostrar la ruta del archivo abierto sin metodos
+        "breadcrumbs.symbolPath": off
