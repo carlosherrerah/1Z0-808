@@ -1,13 +1,25 @@
-public class ejemplo {
-
-    public static void main(String[] args) {
-        int[] numeros1 = new int[] {1, 2, 3, 4, 5};
-        int[] numeros2 = {6, 7, 8, 9, 10};
-
-        for (int i = 0; i < numeros2.length; i++) {
-            System.out.println(numeros2[i]);
-        }
-
-    }
-    
+interface Bounceable {
+    void bounce();
 }
+interface Inflatable {
+    void inflate();
+}
+
+class Ball {
+}
+
+class BeachBall extends Ball implements Bounceable, Inflatable {
+    @Override
+    public void bounce() {
+        System.out.println("The beach ball bounces!");
+        return;
+    }
+
+    @Override
+    public void inflate() {
+        System.out.println("Unimplemented method 'inflate'");
+        return;
+    }
+}
+
+
