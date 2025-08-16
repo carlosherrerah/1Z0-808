@@ -16,19 +16,21 @@ class Empleado {
         birthDate = nacimiento;
     }
 
+
     public String toString() {
         return "{ " + "id: " + id + ", " + "name: " + name + ", " + "birthDate: " + birthDate + " }";
     }
+    
 
 }
 
 class Empleados {
     public static void main(String[] args) {
-
+        int a = 10;  // Variable local
         Empleado emp1 = new Empleado(101, "Batman", LocalDate.of(2018, 10, 21));
         Empleado emp2 = new Empleado(102, "Robins", LocalDate.parse("2012-01-20"));
 
-        System.out.println(emp1);
+        System.out.println(emp1.name);
 
         Empleado[] emp = new Empleado[3];
         emp[0] = new Empleado(1, "Jesus", LocalDate.of(2018, 10, 21));
@@ -40,7 +42,7 @@ class Empleados {
         }
         System.out.println();
 
-        for (Empleado elemento : emp) {
+        for (Empleado elemento : emp) {  // for mejorado
             System.out.println(elemento);
         }
         System.out.println();

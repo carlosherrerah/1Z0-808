@@ -22,8 +22,8 @@ public class P4Rango {
     System.out.println("Byte Min:    " + Byte.MIN_VALUE);
     System.out.println(a);
 
-    int x = 5; //, y = 6;
-    double y = 6;
+    int x = 5,  y = 6;
+    //double y = 6;
     double z = /* (double)*/  (x + y) / 2 ;   // casting
      z = (x + y ) / 2;
     System.out.println(z);

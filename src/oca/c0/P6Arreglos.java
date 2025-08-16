@@ -62,13 +62,15 @@ public class P6Arreglos {
     Integer[] bArray = bList.toArray(new Integer[0]);
 
     // Matrices
-    int[][] matrix = { { 1, 2, 3 }, { 4, 5, 6 }, { 7, 8, 9 } };
+    int[][] matrix = { { 1, 2, 3 }, 
+                       { 4, 5, 6 }, 
+                       { 7, 8, 9 } };
     int matrix2[][] = new int[3][3];
     int[] matrix3[] = new int[3][2];
 
     int[][] array2D = new int[][] { { 0 }, { 1 } };
     int[][][] array3D = { { { 0, 1 }, { 2, 3 }, { 4, 5 } } }; // 1X3X2
-
+    int[][][] arrayD = { { { 0, 1, 3,4 }, { 2, 3,4,2 }, { 4, 5,6,7 } },{{1,2,3,4},{4,5,6,7},{8,7,6,5}} }; // 2X3X4
     matrix2[0][0] = 5;
     System.out.println("Ingrese un valor para la matriz 2: ");
     matrix2[0][1] = scanner.nextInt();
