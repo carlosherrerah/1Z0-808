@@ -24,7 +24,7 @@ hs_err_pid*
 replay_pid*
 
 Personal/
-src/Personal/
+src/personal/
 .env
 .vscode
 bin/

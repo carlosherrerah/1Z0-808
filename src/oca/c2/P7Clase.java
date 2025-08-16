@@ -17,7 +17,7 @@ class Animalito {
 }
 
 class Perro extends Animalito {
-  static String estatico() { // This is a static method, not an override
+  static String estatico() { // not an override, it's a redefinition
     return "Estatico Perro ";
   }
 
@@ -34,7 +34,6 @@ class Perro extends Animalito {
     Perro p = new Perro();
     Animalito ap = new Perro();
 
-    Animalito[] Animal = { new Animalito(), new Perro() };
 
     System.out.println("Animal: " + Animalito.estatico());
     System.out.println("Perro:  " + Perro.estatico());
@@ -45,6 +44,15 @@ class Perro extends Animalito {
     System.out.println(((Animalito) p).estatico());
     System.out.println(p.comer()); // Calls the comer method on the p object
     System.out.println(p.comerOrigen()); // Calls the comer method on the super object
+
+    // Polymorphism in action
+    System.out.println();
+    Animalito[] animal = { new Animalito(), new Perro() };
+    for (Animalito ele : animal) {
+      System.out.println("Animal: " + ele.estatico());  // Animalito.estatico()
+      System.out.println("Comer: " + ele.comer());      // animal.comer()
+    }
+    System.out.println("\nPerro.estatico(): " + Perro.estatico());
   }
 
 }
