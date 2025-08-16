@@ -1,4 +1,4 @@
-oca_8 pag 25/1777
+oca_8
 
 Contenido Tema
 1          Declarations and Access Control	
@@ -19,6 +19,7 @@ Modulo	Tema
 8	    Manejo de excepciones
 9	    Trabajar con clases de selección
 
+-------------------------------------------------------------------------------
 Configuracion VS Code
 No visualizar parametros de métodos en las firmas
     "editor.parameterHints.enabled": false
