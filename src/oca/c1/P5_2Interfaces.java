@@ -14,6 +14,7 @@ interface Bounceable {
 
 interface Foo {
   public static final int BAR = 42;
+  public static final int[][] a = { {1, 0}, {0, 0} };
 
   void go();
 }
@@ -23,5 +24,6 @@ class Zap implements Foo {
   public void go() {
     // BAR = 27;  // No puedes cambiar el valor de una constante
     System.out.println(BAR);
+    a[0][0] = 99; // Pero puedes cambiar el valor de un elemento de un array
   }
 }

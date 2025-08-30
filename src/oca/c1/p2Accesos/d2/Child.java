@@ -1,5 +1,6 @@
 package oca.c1.p2Accesos.d2;
 import oca.c1.p2Accesos.d1.Parent;
+import oca.c1.p2Accesos.d1.Apple;
 
 public class Child extends Parent{
 
@@ -15,7 +16,13 @@ public class Child extends Parent{
   
   public static void main(String[] args) {
     Child c = new Child();
+    c.x = 5;
+    c.edad = 20;
     c.testIt(); 
+
+    Apple a = new Apple();
+    a.eat();
+    System.out.println(a.color);
   }
 
 }

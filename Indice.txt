@@ -21,6 +21,7 @@ Modulo	Tema
 
 -------------------------------------------------------------------------------
 Configuracion VS Code
+
 No visualizar parametros de métodos en las firmas
     "editor.parameterHints.enabled": false
 

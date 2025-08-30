@@ -16,7 +16,7 @@ class Hijo extends Padre {
   }
 }
 
-public class P1Constructores {
+public class P6Constructores {
 
   public static void main(String[] args) {
     Hijo h = new Hijo(10);

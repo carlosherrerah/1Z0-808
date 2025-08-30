@@ -5,8 +5,8 @@ public /* final*/  class Beverages {
   }
 }
 
-// class Juice extends Beverages {
-//   public void importantMethod() {
-//   }
-//}
+class Juice extends Beverages {
+   public void importantMethod() {
+   }
+}
 
