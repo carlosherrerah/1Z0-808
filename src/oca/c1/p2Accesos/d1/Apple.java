@@ -4,7 +4,8 @@ public class Apple extends  Fruit {
     public String color="red";
 
   public void eat() {
-    System.out.println("Eat an apple");
+    System.out.println("Eat an apple" + sabor);
   }
+  
   
 }

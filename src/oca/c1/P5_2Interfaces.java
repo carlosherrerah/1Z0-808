@@ -21,9 +21,17 @@ interface Foo {
 
 class Zap implements Foo {
 
+  @Override
+  public void go() {
+    // TODO Auto-generated method stub
+    throw new UnsupportedOperationException("Unimplemented method 'go'");
+  }
+/*
   public void go() {
     // BAR = 27;  // No puedes cambiar el valor de una constante
     System.out.println(BAR);
     a[0][0] = 99; // Pero puedes cambiar el valor de un elemento de un array
   }
+*/
+
 }

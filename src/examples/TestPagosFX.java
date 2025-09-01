@@ -1,4 +1,5 @@
 package examples;
+/*
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
@@ -30,13 +31,13 @@ public class TestPagosFX extends Application {
             try {
                 double monto = Double.parseDouble(txtMonto.getText());
                 String metodo = comboMetodo.getValue();
-                /*
-                IPago pago = switch (metodo) {
-                    case "Tarjeta" -> new PagoTarjeta();
-                    case "PayPal" -> new PagoPaypal();
-                    default -> new PagoEfectivo();
-                };
-                */
+                
+                // IPago pago = switch (metodo) {
+                //     case "Tarjeta" -> new PagoTarjeta();
+                //     case "PayPal" -> new PagoPaypal();
+                //     default -> new PagoEfectivo();
+                // };
+                
                 IPago pago;
                 switch (metodo) {
                     case "Tarjeta":
@@ -67,5 +68,6 @@ public class TestPagosFX extends Application {
         primaryStage.show();
     }
 }
+*/
 
 

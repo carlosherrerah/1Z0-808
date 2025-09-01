@@ -4,6 +4,7 @@ public class Parent {
     protected int x = 10;
     public int edad;
     private String nombre;
+    int sexo = 1;
     transient String password;  // Esta variable no se serializa OCP
     volatile int contador; // Esta variable puede ser modificada por múltiples hilos OCP
 

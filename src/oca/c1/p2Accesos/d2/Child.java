@@ -12,6 +12,9 @@ public class Child extends Parent{
 
     Child q = new Child();
     System.out.println("x = " + q.x);
+    // Child q1 = new Parent();
+
+    Parent q2 = new Child();
   }
   
   public static void main(String[] args) {
@@ -19,6 +22,7 @@ public class Child extends Parent{
     c.x = 5;
     c.edad = 20;
     c.testIt(); 
+
 
     Apple a = new Apple();
     a.eat();

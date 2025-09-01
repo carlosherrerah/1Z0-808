@@ -137,7 +137,7 @@ public class Evaluacion {
     // D. Java
     System.out.println("\nP13");
     String s = "Java";
-     s = s.concat(" SE 6");
+    s.concat(" SE 6");
     s.replace('6', '7');
     System.out.print(s);
 
