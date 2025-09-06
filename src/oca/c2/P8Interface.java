@@ -28,6 +28,7 @@ public class P8Interface implements DS {
 
 
   public static void main(String[] args) {
+    System.out.println("\033[H\033[2J"); // limpiar pantalla
     System.out.println(DS.estatico());
     System.out.println(new P8Interface().defecto());
     //System.out.println(defecto());  // Cannot make a static reference to the non-static method
@@ -43,12 +44,12 @@ public class P8Interface implements DS {
 
   void go() {
     System.out.println(defecto());        //1
-    //System.out.println(estatico());     //2  I.s The method estatico() is undefined for the type P10Interface
+    System.out.println(estatico());     //2  I.s The method estatico() is undefined for the type P10Interface
     System.out.println(DS.estatico());    //3
 
     P8Interface p10 = new P8Interface(); 
     System.out.println(p10.defecto());   
-    //System.out.println(p10.estatico()); //4 The method estatico() is undefined for the type P10Interface
+    System.out.println(p10.estatico()); //4 The method estatico() is undefined for the type P10Interface
   }
   
 }

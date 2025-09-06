@@ -1,58 +1,60 @@
 package oca.c2;
 
 class Animalito {
-  String especie;
+    String especie;
 
-  //static String especie; // Duplicate field
+    // static String especie; // Duplicate field
 
-  static String estatico() {
-    return "Estatico Animalito ";
-  }
+    static String estatico() {
+        return "Estatico Animalito ";
+    }
 
-  // static String comer() { } // Static and not static methods are not allowed at the same time.
+    // static String comer() { } // Static and not static methods are not allowed at
+    // the same time.
 
-  String comer() {
-    return "De todo";
-  }
+    String comer() {
+        return "De todo";
+    }
 }
 
 class Perro extends Animalito {
-  static String estatico() { // not an override, it's a redefinition
-    return "Estatico Perro ";
-  }
-
-  String comer() {
-    return "Croquetas";
-  }
-
-  String comerOrigen() {
-    return super.comer();
-  }
-
-  public static void main(String[] args) {
-    Animalito a = new Animalito();
-    Perro p = new Perro();
-    Animalito ap = new Perro();
-
-
-    System.out.println("Animal: " + Animalito.estatico());
-    System.out.println("Perro:  " + Perro.estatico());
-    System.out.println("a:      " + a.estatico()); 
-    System.out.println("p:      " + p.estatico());
-    System.out.println("ap:     " + ap.estatico()); // Calls the static method on the Animalito class
-    System.out.println("");
-    System.out.println(((Animalito) p).estatico());
-    System.out.println(p.comer()); // Calls the comer method on the p object
-    System.out.println(p.comerOrigen()); // Calls the comer method on the super object
-
-    // Polymorphism in action
-    System.out.println();
-    Animalito[] animal = { new Animalito(), new Perro() };
-    for (Animalito ele : animal) {
-      System.out.println("Animal: " + ele.estatico());  // Animalito.estatico()
-      System.out.println("Comer: " + ele.comer());      // animal.comer()
+    static String estatico() { // not an override, it's a redefinition
+        return "Estatico Perro ";
     }
-    System.out.println("\nPerro.estatico(): " + Perro.estatico());
-  }
+
+    String comer() {
+        return "Croquetas";
+    }
+
+    String comerOrigen() {
+        return super.comer();
+    }
+
+    public static void main(String[] args) {
+        Animalito a = new Animalito();
+        Perro p = new Perro();
+        Animalito ap = new Perro();
+        a.estatico();  // tricks the reader into thinking it's polymorphic, but it's not
+        Animalito.estatico();
+
+        System.out.println("Animal: " + Animalito.estatico());
+        System.out.println("Perro:  " + Perro.estatico());
+        System.out.println("a:      " + a.estatico());
+        System.out.println("p:      " + p.estatico());
+        System.out.println("ap:     " + ap.estatico()); // Calls the static method on the Animalito class
+        System.out.println("");
+        System.out.println(((Animalito) p).estatico());
+        System.out.println(p.comer()); // Calls the comer method on the p object
+        System.out.println(p.comerOrigen()); // Calls the comer method on the super object
+
+        // Polymorphism in action
+        System.out.println();
+        Animalito[] animal = { new Animalito(), new Perro() };
+        for (Animalito ele : animal) {
+            System.out.println("Animal: " + ele.estatico()); // Animalito.estatico()
+            System.out.println("Comer: " + ele.comer()); // animal.comer()
+        }
+        System.out.println("\nPerro.estatico(): " + Perro.estatico());
+    }
 
 }

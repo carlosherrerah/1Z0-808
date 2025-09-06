@@ -6,7 +6,7 @@ class Animal {
 
     Animal() {
         especie = "ET";
-        // System.out.println("Animal constructor called");
+        //System.out.println("Animal constructor called");
     }
 
     public String move() {
@@ -28,10 +28,12 @@ class Animal {
 }
 
 class Horse extends Animal {
+    int edad=10;
 
     Horse() {
+        super();
         especie = "Equino";
-        // System.out.println("Horse constructor called");
+        //System.out.println("Horse constructor called");
     }
 
     protected /* private */ String eat() { // whoa! - it's private!
@@ -47,7 +49,7 @@ class Horse extends Animal {
         return "Horse neighing: relincha";
     }
 
-    String sleep() {
+    String sleep() {  //overriding 
         return "Horse sleeping";
     }
 
@@ -68,7 +70,7 @@ public class P2Herencia { // TestAnimals
         Animal a = new Animal();
         Horse h = new Horse();
         Animal ah = new Horse(); // Animal ref, but a Horse object
-
+        
         System.out.println();
         System.out.println("a.especie: " + a.especie);
         System.out.println("h.especie: " + h.especie);
@@ -95,10 +97,8 @@ public class P2Herencia { // TestAnimals
         System.out.println("_ah.especie: " + _ah.especie);
         System.out.println("_ah.eat(): " + _ah.eat());
 
-        // Horse _ha = a; // Error de compilacion: Type mismatch: cannot convert from
-        // Animal to Horse
-        // Horse __ha = (Horse) a; // Error de ejecucion: ClassCastException Animal
-        // cannot be cast Horse
+        // Horse _ha = a; // Error de compilacion: Type mismatch: cannot convert from Animal to Horse
+        // Horse __ha = (Horse) a; // Error de ejecucion: ClassCastException Animal cannot be cast Horse
 
         // System.out.println(ah.neigh()); // Error: cannot find symbol method neigh()
         Horse _h = (Horse) ah;
@@ -106,6 +106,8 @@ public class P2Herencia { // TestAnimals
         System.out.println("_h.eat(): " + _h.eat());
         System.out.println("_h.neigh(): " + _h.neigh());
 
+        System.out.println("_h.edad: " + _h.edad);
         System.out.println("\n((Horse)ah).neigh(): " + ((Horse) ah).neigh());
+        
     }
 }

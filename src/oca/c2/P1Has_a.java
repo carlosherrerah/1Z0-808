@@ -1,5 +1,9 @@
 package oca.c2;
 
+import java.text.DecimalFormat;
+import java.text.DecimalFormatSymbols;
+import java.util.Locale;
+
 class Account {
     private int accountNumber;
     private String accountName;
@@ -38,11 +42,15 @@ class Employee {
 
 public class P1Has_a {
     public static void main(String[] args) {
+        //DecimalFormatSymbols symbols = new DecimalFormatSymbols(Locale.US);
+        //DecimalFormat decimal = new DecimalFormat("#,##0.00", symbols);        
+
         Account account = new Account(12345, "John Doe", 10_000.0);
-        Employee employee = new Employee("John Doe", 67890, 50000.0, account);
+        Employee employee = new Employee("John Doe", 101, 50_000, account);
 
         System.out.println(account.getBalance());
         System.out.println(employee.account.getBalance());
+        //System.out.println(decimal.format(employee.account.getBalance()));
     }
 
 }

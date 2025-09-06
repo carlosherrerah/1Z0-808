@@ -49,15 +49,15 @@ public class P4Overriding {
         try {
             // Overloading Compilation Reference type
             int y1 = a.suma("0", 0); // A
-            int y2 = b.suma(0, "0"); // B
-            int y3 = ab.suma("0", 0); // A
+            int y2 = b.suma(0,"0"); // B
+            int y3 = ab.suma("0",0); // A
 
             // Overriding  Runtime object type
             X x1 = a.getValue(); // A
             X x2 = b.getValue(); // B
             X x3 = ab.getValue(); // B
 
-        } catch (Exception e) {
+        }  catch (Exception e) {
             e.printStackTrace();
         }
         System.out.println(". . . Hecho");

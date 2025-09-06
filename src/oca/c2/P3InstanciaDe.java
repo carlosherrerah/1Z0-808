@@ -10,7 +10,7 @@ class Bat { }
 
 public class P3InstanciaDe {
   public static void main(String[] args) {
-
+	System.out.println("\033[H\033[2J"); // limpiar pantalla
     int x = 10;
     String s1 = new String("Hello");
     String s2 = new String("Hello");
@@ -21,20 +21,25 @@ public class P3InstanciaDe {
     System.out.println(s1 == s3);       // false
     System.out.println(s1.equals(s3));  // true
     System.out.println(s3 == s4);       // true
+    
+    System.out.println();
     System.out.println(s3);
     s3 = s3 + " World";
     System.out.println(s3);
     System.out.println(s4);            
 
-    Flyer f = new Eagle();
+    Flyer f = new Eagle(); // f es una referencia de tipo Flyer, pero apunta Eagle.
     Bird b = new Eagle();
     Eagle e = new Eagle();
     Bat m = new Bat();
 
-    if (f instanceof Bird) 
-      System.out.println("f is a Bird"); // yes
+    System.out.println("\nInstance of results:");
     if (f instanceof Flyer)
       System.out.println("f is a Flyer"); // yes
+    if (f instanceof Bird)  // Flyer ← Bird ← Eagle
+      System.out.println("f is a Bird"); // yes
+    if (f instanceof Eagle)
+      System.out.println("f is a Eagle"); // yes
 
     if (b instanceof Bird)
       System.out.println("b is a Bird"); // yes
@@ -50,10 +55,12 @@ public class P3InstanciaDe {
       System.out.println("m is a Flyer"); // no
     if (m instanceof Object)
       System.out.println("m is a Object"); // yes
+
     if(s1 instanceof Object)
       System.out.println("s1 is a Object"); // yes
-    //if(x instanceof Object)
-      System.out.println("x is a Object"); // no
+    
+    //if (x instanceof Object)   // No primitive types
+    //  System.out.println("x is a Object"); // no
 
   }
 

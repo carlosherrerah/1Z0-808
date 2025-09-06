@@ -13,6 +13,8 @@ interface I1 {
         return 20;
     }
 
+    // int doMas();
+
 }
 
 interface I2 {
@@ -27,14 +29,15 @@ public class P6MultiInterface implements I1, I2 {
     public int doStuff() { // public
         return 3;
     }
-
     void go() {
         System.out.println(doStuff());
+        return;
     }
 
     public static void main(String[] args) {
         new P6MultiInterface().go(); // 3
         P6MultiInterface a = new P6MultiInterface();
+
         System.out.println(a.doStuff()); // 3
         System.out.println(a.doCosas());
         System.out.println(I1.doOtras());

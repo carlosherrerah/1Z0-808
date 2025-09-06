@@ -1,18 +1,21 @@
 12. Given:
 
 3. class Building {
-4. Building() { System.out.print("b "); }
-5. Building(String name) {
-6. this(); System.out.print("bn " + name);
-7. }
+4.     Building() { System.out.print("b "); }
+5.     Building(String name) {
+6.        this(); System.out.print("bn " + name);
+7.     }
 8. }
-9. public class House extends Building {
-10. House() { System.out.print("h "); }
-11. House(String name) {
-12. this(); System.out.print("hn " + name);
-13. }
-14. public static void main(String[] args) { new House("x "); }
-15. }
+
+9.  public class House extends Building {
+10.     House() { System.out.print("h "); }
+11.     House(String name) {
+12.         this(); System.out.print("hn " + name);
+13.     }
+14.     public static void main(String[] args) {
+15.         new House("x "); 
+16.     }
+17. }
 
 What is the result?
 A. h hn x

@@ -15,10 +15,11 @@ public class P5Casting { // Chrome
         Persona p = new Persona();
         Maestro m = new Maestro();
         Persona pm = new Maestro();
+        // pm = m;
 
         Persona x = m; // implicito
         x = (Persona) m; // explicito
-        //pm = m;
+        // pm  = m;
 
         p = pm; // implicito
         p = (Maestro) pm; // explicito
@@ -42,6 +43,6 @@ public class P5Casting { // Chrome
         m.do2();
         // ((Persona) m).do2(); // se puede ?
 
-        System.out.println(". . . Hecho");
+        System.out.println(". .... . Hecho");
     }
 }

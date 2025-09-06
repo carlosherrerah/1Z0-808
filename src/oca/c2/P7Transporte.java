@@ -13,6 +13,9 @@ public class P7Transporte {
     }
 
     public static void main(String[] args) {
+        P7ITransporte auto = crearTransporte("auto");
+        auto.moverse();
+
         P7ITransporte[] transportes = new P7ITransporte[2];
         transportes[0] = crearTransporte("auto");
         transportes[1] = crearTransporte("barco");
