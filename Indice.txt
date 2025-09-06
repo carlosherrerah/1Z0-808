@@ -22,8 +22,9 @@ Modulo	Tema
 -------------------------------------------------------------------------------
 Configuracion VS Code
 
-No visualizar parametros de métodos en las firmas
-    "editor.parameterHints.enabled": false
+No visualizar pistas de nombres de parámetros
+    Editor › Inlay Hints: Enabled
+		Seleccionar off
 
 Java: Activating forever
     Ctrl + Shift + P

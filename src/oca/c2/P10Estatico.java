@@ -8,9 +8,11 @@ class Padre {
 }
 
 class Hijo extends Padre {
+    
     public static void metodoEstatico() {
-        System.out.println("Método estático de la clase Hijo");
+        System.out.println("Método estático de la clase Hijo");  // Redefinición
     }
+        
 }
 
 class Main {
@@ -21,7 +23,9 @@ class Main {
 
         Hijo h = new Hijo();
         h.metodoEstatico(); // Imprime "Método estático de la clase Hijo"
+        System.out.println("Valor de h.x: " + h.x); // Hijo hereda x de Padre
 
+        System.out.println();
         Padre ph = new Hijo();
         ph.metodoEstatico(); // Imprime "Método estático de la clase Padre"
 
