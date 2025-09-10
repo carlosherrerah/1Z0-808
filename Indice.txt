@@ -26,10 +26,11 @@ No visualizar pistas de nombres de parámetros
     Editor › Inlay Hints: Enabled
 		Seleccionar off
 
+Mostrar la ruta del archivo abierto sin metodos
+        "breadcrumbs.symbolPath": off
+
 Java: Activating forever
     Ctrl + Shift + P
         Java: Clean the Java language server workspace
             Choose "Restart and delete"
  
-Mostrar la ruta del archivo abierto sin metodos
-        "breadcrumbs.symbolPath": off
