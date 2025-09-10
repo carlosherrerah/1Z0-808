@@ -8,25 +8,35 @@ interface IFrogBoilable {
     default String hop() {
         return "The frog hops!";
     }
+
+    String bye();
 }
 
 class DongBoilFrogs implements IFrogBoilable {
+
+    @Override
+    public String bye() {
+        return "The frog says goodbye!";
+    }
+
     void go() {
-        System.out.println("C to F: " + IFrogBoilable.getCtoF(25));
         System.out.println("hop: " + hop());
+        System.out.println("bye: " + bye());
+        System.out.println("C2F: " + IFrogBoilable.getCtoF(25));
 
-        DongBoilFrogs dbf = new DongBoilFrogs();
-        System.out.println(IFrogBoilable.getCtoF(100));  // Lo ve como un método estático
-        System.out.println(dbf.hop());  // Lo ve como un método de instancia
-
+        IFrogBoilable ifb = new DongBoilFrogs();
+        System.out.println("hop: " + ifb.hop());
+        System.out.println("bye: " + ifb.bye());
+        System.out.println("C2F: " + IFrogBoilable.getCtoF(30));
     }
 
 
     // This class can use the static method and the default method
     public static void main(String[] args) {
         DongBoilFrogs dbf = new DongBoilFrogs();
-        dbf.hop();
-        System.out.println("C to F: " + IFrogBoilable.getCtoF(100));
+        System.out.println(dbf.hop()); // default method
+        System.out.println(dbf.bye()); // implemented method
+        System.out.println(IFrogBoilable.getCtoF(100)); // static method
 
         new DongBoilFrogs().go();
 
