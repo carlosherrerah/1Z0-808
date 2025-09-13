@@ -17,6 +17,9 @@ public class P4Rango {
     // 256*1 - 128 = 128 -> -128
     // 256*2 - 128 = 384 -> -128
     // 256*3 - 128 = 640 -> -128
+    double r = 514%256;
+    double E = r > 127 ? r - 256 : r;
+    System.out.println("E: " + E); 
 
     System.out.println("Byte Max:    " + Byte.MAX_VALUE);
     System.out.println("Byte Min:    " + Byte.MIN_VALUE);

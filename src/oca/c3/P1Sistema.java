@@ -16,9 +16,9 @@ public class P1Sistema {
 
     // Sistemas
     int b = 0b1010; // 10
-    int B = 0B1010; // 10
+    int B = 0B10_10; // 10
 
-    int o = 015;
+    int o = 0_15;
     int O = 015;
 
     int h = 0xFea;

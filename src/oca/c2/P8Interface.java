@@ -1,24 +1,26 @@
 package oca.c2;
 
 interface DS {
+    public static final int VALOR = 5; // por defecto son public static final
 
-    default String defecto() { // Id la palabra default, solo existe en la interface
+    public abstract void hello();
+
+    default String defecto() { // La palabra default, solo existe en la interfaz
         return "default de interfaz";
     }
 
-    static String estatico() { // I.s la palabra static, existe en la interface y en la clase
+    static String estatico() { // La palabra static, existe en la interfaz y en la clase
         return "Estatico de Interfaz";
     }
-
-    void bye();
 
 }
 
 public class P8Interface implements DS {
+    static final int VALOR = 10; // variable de clase
 
     @Override
-    public void bye() {
-        System.out.println("Adios desde la clase");
+    public void hello() {
+        System.out.println("Hola desde la clase");
     }
 
     @Override
@@ -26,8 +28,7 @@ public class P8Interface implements DS {
         return "default de clase";
     }
 
-    static String estatico() { // Este metodo estatico es de la clase, no de la interface, NO puede ir
-                               // @Override
+    static String estatico() { // Metodo que pertenece a la clase, por eso no lleva @Override
         return "Estatico de Clase";
     }
 
@@ -37,7 +38,9 @@ public class P8Interface implements DS {
         DS.super.defecto();
     }
 
-    // Un metodo estatico NO puede llamar directamente a un metodo de instancia, se necesita un objeto
+    // Un metodo estatico NO puede llamar directamente a un metodo de instancia
+    // Un metodo estatico NO puede llamar directamente a un atributo de instancia
+    // necesita un objeto
     public static void main(String[] args) {
         System.out.println("\033[H\033[2J"); // limpiar pantalla
         System.out.println(estatico()); // un metodo estatico puede llamar a otro estatico directamente
@@ -50,9 +53,12 @@ public class P8Interface implements DS {
         System.out.println();
 
         System.out.println(DS.estatico());
+        System.out.println(DS.VALOR); // Variable estatica de interfaz
+
+        System.out.println(miClase.VALOR); // Aunque es una variable de clase, se puede llamar desde un objeto
+        System.out.println(P8Interface.VALOR); // Variable estatica de clase
 
         System.out.println(". . .Hecho");
-
 
     }
 

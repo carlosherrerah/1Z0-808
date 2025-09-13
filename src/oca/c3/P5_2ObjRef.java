@@ -1,5 +1,5 @@
 package oca.c3;
-
+// Usar Debug Java
 class Bar {
   int barNum = 28;
 }
@@ -16,10 +16,10 @@ class Foo {
   }
 
   public static void main(String[] args) {
+    System.out.println("\033[H\033[2J"); // limpiar pantalla
     Foo f = new Foo();
     System.out.println("f.myBar.barNum is " + f.myBar.barNum);
     f.changeIt(f.myBar);  // shadowing variable
-    System.out.println("f.myBar.barNum after changeIt is " + f.myBar.barNum); // 99 or 28?
+    System.out.println("f.myBar.barNum after changeIt is " + f.myBar.barNum); // 99 or 28 or 420?
   }
-
 }

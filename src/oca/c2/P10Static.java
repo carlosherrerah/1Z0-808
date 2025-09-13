@@ -1,7 +1,7 @@
 package oca.c2;
 
 class Frog {
-    static /* static */ int frogCount; // Declare and initialize static variable
+    static int frogCount; // Declare and initialize static variable
     int x = 3;
 
     static int getCount() { // Static method to access the static variable
@@ -13,7 +13,10 @@ class Frog {
     }
 
     void go() {
-        System.out.println("from inst " + Frog.getCount());
+        System.out.println("from go " + Frog.getCount());
+        System.out.println("from go " + this.getCount());
+        System.out.println("from go " + getCount());
+        System.out.println("from go " + frogCount);
     }
 
     public static void main(String[] args) {

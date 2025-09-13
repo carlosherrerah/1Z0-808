@@ -23,7 +23,7 @@ public class P6_211Garbage {
     a1 = null;
     b1 = null;
     b2 = null;
-    // do stuff
+    // do stuff: how many objects will be eligible for garbage collection ? 
     System.out.println(". . . Hecho");
   }
 }

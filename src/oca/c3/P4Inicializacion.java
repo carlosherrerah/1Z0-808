@@ -7,7 +7,7 @@ public class P4Inicializacion {
   int year;
   String name;
 
-  public /*static*/ void showYear() {
+  public /* static */ void showYear() {
     System.out.println("The year is " + year);
   }
 
@@ -22,20 +22,21 @@ public class P4Inicializacion {
     System.out.println(s2 == s4); // true
 
     System.out.println(s1.equals(s2)); // true
-    s2 = s2 + "Mundo";
-    System.out.println(s4);
+    s2 = s2 + " Mundo";
+    System.out.println(s2);
 
+    System.out.println();
     P4Inicializacion p = new P4Inicializacion();
     int year;
     /* if (args[0] != null) */ {
        year = 2010;
     }
-    System.out.println(year); // No compila
+    System.out.println(year); 
     System.out.println(p.year);
     System.out.println(p.name);
     p.showYear();
-    //showYear(); // No compila
-    p.name.toUpperCase(); // NullPointerException
+    // showYear(); // No compila
+    // p.name.toUpperCase(); // NullPointerException
     String s = p.name;
     if (s != null) {
       String t = s.toLowerCase();
@@ -45,7 +46,7 @@ public class P4Inicializacion {
     System.out.println(arreglo[0]);
 
     // Reemplazar Date con LocalDate
-    LocalDate d = LocalDate.ofEpochDay(0);  // 1970-01-01
+    LocalDate d = LocalDate.ofEpochDay(0);  // 1970-01-01 = 0
     System.out.println(d);
 
     LocalDate d2 = LocalDate.of(2015, 1, 1);
@@ -53,7 +54,7 @@ public class P4Inicializacion {
     LocalDate d3 = LocalDate.now();
     System.out.println(d3);
     LocalDate d4; 
-    //System.out.println(d4); // No compila
+    // System.out.println(d4); // No compila
    
     Dimension a = new Dimension(5,10);
     System.out.println(a.width + ":" +a.height);  // 5:10

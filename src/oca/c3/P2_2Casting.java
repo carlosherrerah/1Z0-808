@@ -15,11 +15,16 @@ public class P2_2Casting {
     float decimal = pi - entera;
     c = (byte) entera;
 
+
     byte b = 127;
+    b ++; // b = (byte) (b + 1);
     b += 7; // b = (byte) (b + 7);  
-    //b = b + 7; // Error de compilación
+    // b = b + 7; // Error de compilación
     System.out.println("b: " + b);
 
+    double r = 135%256;
+    double E = r > 127 ? r - 256 : r;
+    System.out.println("E: " + E); 
     
     // Casting
     // Widening
@@ -28,13 +33,13 @@ public class P2_2Casting {
     System.out.println("Widening: " + l);
     
     // Narrowing
-    long l2 = 10;
+    long l2 = 10L;
     int i2 = (int) l2;
     System.out.println("Narrowing: " + i2);
 
     final int[] array = { 1, 2, 3 };
-    // array = new int[] { 4, 5, 6 }; // Error de compilación
-    array[0] = 4;                     // OK, si se permite aunque sea final
+    // array = new int[] { 4, 5, 6 }; // Error de compilación, ya que es final 
+    array[0] = 4;                     // OK, los elementos si se pueden cambiar
 
 /*    
     // Casting Objects
@@ -50,7 +55,7 @@ public class P2_2Casting {
     h.neigh();
  */   
     // ClassCastException
-    // Animal a2 = new Animal();
+    //Animal a2 = new Animal();
     // Horse h2 = (Horse) a2;
     // h2.eat();
     

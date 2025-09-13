@@ -2,13 +2,21 @@ package oca.c3;
 
 public class P2_1Primitivos {
   public static void main(String[] args) {
-    char[] cMensaje = { 'M', 'u', ' ', 'd', 'o', '\u0000' };
+    char[] cMensaje = { 'M', 'u', 'n', 'd', 'o', '\u0000' };
     char nullChar = '\u0000';
 
     String sMensaje = "Mundo"; // String No es un primitivo
 
     int lenC = cMensaje.length;
+    System.out.println(lenC); // 6
     int lenS = sMensaje.length();
+    System.out.println(lenS); // 5
+
+    // Recorrer el arreglo de caracteres
+    for (char c : cMensaje) {
+      System.out.print(c + "\t");
+    }
+    System.out.println();
 
     int i = 0;
     while (cMensaje[i] != nullChar) {
@@ -49,7 +57,7 @@ public class P2_1Primitivos {
     long m = 1000;
     m = 1000L;
 
-    float f = 1_0.001_002F;   // debe llevar la f al final
+    float f = 1_0.001_002F; // debe llevar la f al final
     double d = 3.1416;
     d = 3.1416d;
     d = 314.16e-2;
@@ -62,6 +70,14 @@ public class P2_1Primitivos {
     // int a = 0x1_0_;
     // float a = 1_0._001_002f;
     // boolean a = TRUE;
+
+    double r ;
+    int x = 9;
+    double y = 2;  // int
+    // r = (double) x / y; 
+    // r = 1.0 * x / y;
+    r = x / y;
+    System.out.println(r);
 
   }
 
