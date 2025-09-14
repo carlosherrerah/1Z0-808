@@ -21,7 +21,7 @@ class B extends A {
   }
 
   public static void doBstuff() {
-    System.out.println("doBstuff()\n");
+    System.out.println("doBstuff()");
   }
 }
 
@@ -42,18 +42,17 @@ public class P3instanceOfC4 {
     A a = new A();
     B.m2(a);
     
-
     System.out.println("\ninstanceof con clases: b");
     B b = new B();
     b.m2(b);
     B.m2(b);
-
-
+    
     System.out.println("\ninstanceof con clases: ab");
     A ab = new B();
     B.m2(ab);
+    ((B) ab).m2(ab);
     
-
+    System.out.println("");
     System.out.println(a instanceof Foo);
     System.out.println(b instanceof A);
     System.out.println(b instanceof Foo);

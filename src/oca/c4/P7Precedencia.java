@@ -3,7 +3,8 @@ package oca.c4;
 public class P7Precedencia {
   public static void main(String[] args) {
     System.out.println("\033[H\033[2J"); // limpiar pantalla
-    System.out.println("1 " + (true & false == false | true));
+    System.out.println("U M A R E L S A ");
+    System.out.println("1 " + (true & false == false | false));
     System.out.println("2 " + (true & (false == false) | true));
     System.out.println("3 " + (true & (false == false | true)));
     System.out.println("4 " + ((true & false) == (false | true)));
@@ -19,7 +20,7 @@ public class P7Precedencia {
     System.out.println("8 " + (flag1 = flag2 != flag3 == !flag4)); 
 
     boolean flag = false;
-    System.out.println("9 " + ((flag = true) | (flag = false) || (flag = true)));
+    System.out.println("9 " + ( (flag = true) | (flag = false) || (flag = true) ));
     System.out.println("10 " + flag);
     // bitwise inclusive OR | has higher precedence over logical OR ||
     // || is a short-circuit operator and as left operand evaluates to true, hence

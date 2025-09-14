@@ -2,6 +2,17 @@ package oca.c4;
 
 public class P1Comp2 {
   public static void main(String[] args) {
+
+    int y=0, x = 0;
+
+    // Without compound operators:
+    y = y - 6;
+    x = x + 2 * 5;
+    // Now, with compound operators:
+    y -= 6;
+    x += 2 * 5;
+    System.out.println("x= " + x + " y= " + y);
+    
     int a = 123;
     Integer A1 = 123;
     Integer A2 = new Integer("123"); // new Integer(123);   123
@@ -24,15 +35,6 @@ public class P1Comp2 {
     binario = binario.replace("_", "");
     System.out.println(binario + "  = " + (byte) Integer.parseInt(binario, 2));
     System.out.println(binario + "  = " +  Integer.parseUnsignedInt(binario, 2));
-
-    int y=0, x = 0;
-
-    // Operadores de asignación compuestos
-    y = y - 6;
-    x = x + 2 * 5;
-    // Now, with compound operators:
-    y -= 6;
-    x += 2 * 5;
 
 
   }
