@@ -27,3 +27,16 @@ public class P6_211Garbage {
     System.out.println(". . . Hecho");
   }
 }
+
+// b1 = #1 -> Beta
+// b2 = #2 -> Beta
+// a1 = #3 -> Alpha -> |b1.= #1 
+//                     |b2 = #1
+// a2 = #4 -> Alpha -> |b1.= #1 
+//                     |b2 = #2
+
+// After a1=null; b1=null; b2=null;
+// vive a2 y sobreviven b1, b2
+// Por lo tanto solo muere a1, porque nadie apunta a él
+
+

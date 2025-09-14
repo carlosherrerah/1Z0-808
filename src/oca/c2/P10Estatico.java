@@ -9,7 +9,7 @@ class Padre {
 }
 
 class Hijo extends Padre {
-
+    
     public static void metodoEstatico() {  // Si no existiera este método, se hereda el de Padre
         System.out.println("Método estático de la clase Hijo"); // Redefinición
     }

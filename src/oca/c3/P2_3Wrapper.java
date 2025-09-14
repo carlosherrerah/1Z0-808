@@ -6,14 +6,15 @@ public class P2_3Wrapper {
 
     // Autoboxing
     Integer I1 = 127;
-    Integer I2 = new Integer("127");
+    //Integer I2 = new Integer("127");
     Integer I3 = new Integer(100);
-    //Integer I2 = 127;
+    Integer I2 = 127;
     System.out.println(I1 == I2);
     System.out.println(I1.equals(I2));
 
     // Unboxing
     int i = I1;
+    System.out.println("i == I1 " + (i == I1));
     System.out.println(i);
 
     System.out.println("Integer.MAX_VALUE: " + Integer.MAX_VALUE); // 2^31 - 1

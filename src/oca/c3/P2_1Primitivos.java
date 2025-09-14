@@ -40,6 +40,7 @@ public class P2_1Primitivos {
 
     char nextLine = '\n';
     char doubleQuote = '\"';
+    char tab = '\t';
 
     char letra = 'A';
     for (int j = 0; j < 26; j++) {
@@ -57,7 +58,7 @@ public class P2_1Primitivos {
     long m = 1000;
     m = 1000L;
 
-    float f = 1_0.001_002F; // debe llevar la f al final
+    float f = 1_0.001_002f; // debe llevar la f al final
     double d = 3.1416;
     d = 3.1416d;
     d = 314.16e-2;
@@ -73,7 +74,7 @@ public class P2_1Primitivos {
 
     double r ;
     int x = 9;
-    double y = 2;  // int
+    int y = 2;  // int
     // r = (double) x / y; 
     // r = 1.0 * x / y;
     r = x / y;

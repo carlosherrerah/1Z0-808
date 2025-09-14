@@ -23,7 +23,8 @@ public class P4Inicializacion {
 
     System.out.println(s1.equals(s2)); // true
     s2 = s2 + " Mundo";
-    System.out.println(s2);
+    System.out.println("Hola Mundo: " +s2);
+    System.out.println(s4);
 
     System.out.println();
     P4Inicializacion p = new P4Inicializacion();
@@ -54,7 +55,7 @@ public class P4Inicializacion {
     LocalDate d3 = LocalDate.now();
     System.out.println(d3);
     LocalDate d4; 
-    // System.out.println(d4); // No compila
+    //System.out.println(d4); // No compila
    
     Dimension a = new Dimension(5,10);
     System.out.println(a.width + ":" +a.height);  // 5:10
