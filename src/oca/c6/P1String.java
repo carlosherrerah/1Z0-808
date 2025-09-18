@@ -3,6 +3,7 @@ package oca.c6;
 public class P1String {
 
   public static void main(String[] args) {
+    System.out.println("\033[H\033[2J"); // limpiar pantalla    
 /*
     String s = "abc";
     String s2 = s;
@@ -12,6 +13,8 @@ public class P1String {
     System.out.println(s2);
     System.out.println(s == s2);
 */
+
+
     String s1 = "spring ";
     String s2 = s1 + "summer ";
     s1.concat("fall ");
@@ -38,8 +41,7 @@ public class P1String {
     System.out.println(tokens.length);    // sin parentesis por ser atributo
     System.out.println();
 
-
-
+    System.out.println(". . . Hecho");
   }
 
 }

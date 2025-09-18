@@ -28,13 +28,13 @@ public class P3Arrays {
     scores2[0] = 1; // llenado de un array
 
     char[] c1 = new char[3];
-    char[] c2 = { 'a', 'b', 'c' }; 
-    char[] c3 = new char[] { 'a', 'b', 'c', }; 
+    char[] c2 = { 'a', 'b', 'c' };      // recommended
+    char[] c3 = new char[] { 'a', 'b', 'c', };  
     char[] c4 = { 0x4e, '\u004e', 78 };
 
 
     int[] scores3 = { 1, 2, 3, 4, 5 }; // recommended
-    int[] scores4 = new int[] { 1, 2, 3, 4, 5 }; // recommended
+    int[] scores4 = new int[] { 1, 2, 3, 4, 5 };
 
     int[][] scores5 = { { 5, 2, 4, 7 }, { 9, 2 }, { 3, 4 } };
 
@@ -55,6 +55,11 @@ public class P3Arrays {
 
     Domestico[] pets = dogs; // legal because Perro is a Domestic, Perro implements Domestic
     // Perro[] dogs3 = pets; // illegal, because Domestic is not necessarily a Dog
+    Domestico[] pets2 = pets;
+    pets[0] =  new Perro("Scruffy"); // legal, because Scruffy is-a Dog 
+    System.out.println(pets[0]);
+    System.out.println(pets2[0]);
+    System.out.println(dogs[0].name);
     System.out.println(dogs[0] instanceof Domestico); // true
 
     System.out.println(". . . Hecho");

@@ -3,7 +3,7 @@ package oca.c6;
 // Encapsulacion
 
 class Special {
-  StringBuilder s = new StringBuilder("hello");
+  private StringBuilder s = new StringBuilder("hello");
 
   StringBuilder getName() {
     return s;
@@ -16,7 +16,7 @@ class Special {
 
 public class P5Encapsulacion {
   public static void main(String[] args) {
-    Special sp = new Special();
+    Special sp = new Special();  
     StringBuilder s2 = sp.getName();
     s2.append(" world");
     sp.printName();
