@@ -11,7 +11,7 @@ class Padre {
 class Hijo extends Padre {
     
     public static void metodoEstatico() {  // Si no existiera este método, se hereda el de Padre
-        System.out.println("Método estático de la clase Hijo"); // Redefinición
+        System.out.println("Método estático de la clase Hijo"); // Redefinición, no sobreescritura @Override
     }
 
 }
@@ -21,6 +21,7 @@ class Main {
 		System.out.println("\033[H\033[2J"); // limpiar pantalla        
         Padre p = new Padre();
         p.metodoEstatico(); // Imprime "Método estático de la clase Padre"
+        Padre.metodoEstatico(); // En realidad pertence a la clase, no al objeto
         System.out.println("Valor de p.x: " + p.x); // Padre.x
 
         Hijo h = new Hijo();

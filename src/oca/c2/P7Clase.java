@@ -18,10 +18,14 @@ class Animalito {
 }
 
 class Perro extends Animalito {
+
+    
     static String estatico() { // not an override, it's a redefinition
         return "Estatico Perro ";
     }
+    
 
+    @Override
     String comer() {
         return "Croquetas";
     }
@@ -33,6 +37,8 @@ class Perro extends Animalito {
     public static void main(String[] args) {
         Animalito a = new Animalito();
         Perro p = new Perro();
+        System.out.println("->" + p.estatico()); // tricks the reader into thinking it's polymorphic, but it's not
+        System.out.println("->" + Perro.estatico()); // Si se hereda
         Animalito ap = new Perro();
         a.estatico();  // tricks the reader into thinking it's polymorphic, but it's not
         Animalito.estatico();
