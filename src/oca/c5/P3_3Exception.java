@@ -41,7 +41,7 @@ public class P3_3Exception {
 
     public static void main(String[] args) throws Exception {
         System.out.println("\033[H\033[2J"); // limpiar pantalla
-        // lanzar();
+        //lanzar();
         badMethod();
         System.out.println(". . . Hecho!");
     }

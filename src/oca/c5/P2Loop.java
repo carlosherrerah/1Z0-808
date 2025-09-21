@@ -12,9 +12,9 @@ public class P2Loop {
 
     public static void main(String[] args) {
         int x1 = 0, y1;
-        // y++ // error: unexpected type
+        //y1++ // error: unexpected type
 
-        // int a= 0, int b = 0; // error: expected
+        //int a= 0, int b = 0; // error: expected
         do {
             System.out.println("Inside loop");
         } while (false);
@@ -42,14 +42,15 @@ public class P2Loop {
 
         System.out.println("\nImprimiendo matriz");
         int[][] twoDee = { { 1, 2, 3 },
-                { 4, 5, 6 },
-                { 7, 8, 9 } };
+                           { 4, 5, 6 },
+                           { 7, 8, 9 } };
         for (int[] outer : twoDee) {
             for (int inner : outer) {
                 System.out.print(inner + " ");
             }
             System.out.println();
         }
+        System.out.println(twoDee);
 
         System.out.println("\nTabla del 5");
         int num = 5;
@@ -77,8 +78,8 @@ public class P2Loop {
             System.out.print(i + "\t");
         }
         
-        int x = 0;
-        // for (x : arr) { } // the "enhanced for" must declare its first operand
+        //int x = 0;
+        for (int x : arr) { } // the "enhanced for" must declare its first operand
 
     }
 

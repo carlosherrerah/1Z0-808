@@ -9,7 +9,7 @@ public class P1Seleccion {
 
     int x = 0; // expresion
     switch (x) {
-      case a: // ok
+      case a: // ok 
       //case b: // compiler error
       //case c: // compiler error
     }
